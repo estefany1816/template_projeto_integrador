@@ -26,7 +26,7 @@ Nosso sistema web "Mel - Adoção e Cuidados" tem como objetivo facilitar o proc
 > A MEL - Adoção e Cuidados precisa inicialmente dos seguintes relatórios:
 * Relatório que informe quantos doadores estão cadastrados,  incluindo as seguintes informações: Nome, nome de usuário e senha.
 * Relatório que informe quantos donatários estão cadastrados, incluindo as seguintes informações: Nome, nome de usuário e senha.
-* Relatório de animais cadastrados incluindo as seguintes informações: categoria (cachorro, gato, calopsita e hamster) e sexo.
+* Relatório de animais cadastrados incluindo as seguintes informações: nome, categoria (cachorro, gato, calopsita e hamster) e sexo.
 * Relatório de quantos animais foram cadastrados por cada pessoa.
 * Relatório de quantas pessoas solicitaram a tutela do pet para os doadores.
  
