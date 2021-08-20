@@ -64,7 +64,7 @@ Nosso sistema web "Mel - Adoção e Cuidados" tem como objetivo facilitar o proc
 
 
 ### 7	MODELO LÓGICO<br>
-   ![image](https://user-images.githubusercontent.com/87152467/130253515-4e3c316f-c93f-49e9-9cdc-5805adf172d1.png)
+   ![image](https://user-images.githubusercontent.com/87152467/130260642-1393b3c5-29f5-4764-9c1f-fcc4f80fa0e5.png)
 
 
 ### 8	MODELO FÍSICO<br>
