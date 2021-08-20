@@ -12,12 +12,7 @@ Maria Eduarda:mellltomaz@gmail.com<br>
 
 ### 2.MINIMUNDO<br>
 
->Nosso sistema web "Mel - Adoção e Cuidados" tem como objetivo facilitar o processo de adoção de animais.
-Aqui será representado a relação principal do nosso sistema web. 
-Para que ocorra a adoção, o doador primeiramente precisa ser cadastrado no sistema web e deverá cadastrar um ou vários animais no sistema web e cada animal deverá ser cadastrado por somente um doador.
-Um doador também precisa ser cadastrado e poderá doar um ou vários animais para um respectivo donatário, e o donatário poderá solicitar a doação de um ou vários animais para o doador.
-O donatário poderá escolher(se interessar) um ou vários animais e os animais poderão ser escolhidos por vários donatários. 
-O modelo conceitual que será apresentado mais tarde, tem por objetivo apresentar as principais entidades, relações entre as entidades, e seus respectivos atributos necessários para facilitar o processo de adoção de animais.
+Nosso sistema web "Mel - Adoção e Cuidados" tem como objetivo facilitar o processo de adoção de animais. Aqui será representado a relação principal do nosso sistema web. Para que ocorra a adoção, o doador primeiramente precisa ser cadastrado no sistema web e deverá cadastrar um ou vários animais no sistema web e cada animal deverá ser cadastrado por somente um doador. Um animal pode ser somente um tipo (cachorro, gato, calopsita e hamster) e cada tipo de animal pode ou não ter vários animais do mesmo tipo. Um doador também precisa ser cadastrado e poderá doar um ou vários animais para um respectivo donatário, e o donatário poderá solicitar a doação de um ou vários animais para o doador. O donatário poderá escolher (se interessar) um ou vários animais e os animais poderão ser escolhidos por vários donatários. O modelo conceitual que será apresentado mais tarde, tem por objetivo apresentar as principais entidades, relações entre as entidades, e seus respectivos atributos necessários para facilitar o processo de adoção de animais. 
  
 
 ### 3.RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
@@ -49,30 +44,34 @@ O modelo conceitual que será apresentado mais tarde, tem por objetivo apresenta
  
  ### 6.MODELO CONCEITUAL<br>  
         
-![image](https://user-images.githubusercontent.com/87152467/127599503-02ac0d93-9fb2-4fe4-b1ae-ae5f3c35b579.png)
+![image](https://user-images.githubusercontent.com/87152467/130252472-66f5542d-d9f3-4e56-a705-a3890877c724.png)
     
       
     
 #### 6.1 Descrição dos dados 
-    nome_doador: Armazena o nome da pessoa cadastrada, no caso, o doador.<br>
-    nome_usuario_doador: Armazena o nome de usuário da pessoa cadastrada, no caso, o doador.<br>
-    senha_doador: Armazena a senha da pessoa cadastrada, no caso, o doador.<br>
-    codigo_doador: Armazena o código da pessoa cadastrada, no caso, o doador.<br>
-    nome_donatario: Armazena o nome da pessoa cadastrada, no caso, o donatário.<br>
-    nome_usuario_donatario: Armazena o nome de usuário da pessoa cadastrada, no caso, o donatário.<br>
-    senha_donatario: Armazena a senha da pessoa cadastrada, no caso, o donatário.<br>
-    codigo_donatario: Armazena o código da pessoa cadastrada, no caso, o donatário.<br>
-    Animais: Armazena a categoria de animais (cachorro, gato, calopsita e hamster). <br>
-    codigo_animais: Armazena o código dos animais.<br>
-    sexo_animais: Armazena o sexo dos animais.<br>
+    nome_doador: Armazena o nome da pessoa cadastrada, no caso, o doador.
+    nome_usuario_doador: Armazena o nome de usuário da pessoa cadastrada, no caso, o doador.
+    senha_doador: Armazena a senha da pessoa cadastrada, no caso, o doador.
+    codigo_doador: Armazena o código da pessoa cadastrada, no caso, o doador.
+    nome_donatario: Armazena o nome da pessoa cadastrada, no caso, o donatário.
+    nome_usuario_donatario: Armazena o nome de usuário da pessoa cadastrada, no caso, o donatário.
+    senha_donatario: Armazena a senha da pessoa cadastrada, no caso, o donatário.
+    codigo_donatario: Armazena o código da pessoa cadastrada, no caso, o donatário.
+    Tipo_Animal: Armazena a categoria de animais disponíveis (cachorro, gato, calopsita e hamster).
+    codigo_Tipo_Animal: Armazena os códigos que indentificam cada categoria de animal,
+    codigo_animal: Armazena o código do animal.
+    sexo_animal: Armazena o sexo do animal.
 
 
 ### 7	MODELO LÓGICO<br>
-   (![image](https://user-images.githubusercontent.com/87152467/127600386-ba7f834d-0636-476a-9366-6c6b3c8c203a.png))
+   ![image](https://user-images.githubusercontent.com/87152467/130253515-4e3c316f-c93f-49e9-9cdc-5805adf172d1.png)
+
 
 ### 8	MODELO FÍSICO<br>
-   (![image](https://user-images.githubusercontent.com/87152467/127601403-0dd3f030-d459-4250-af85-63db50407ed6.png))
-   (![image](https://user-images.githubusercontent.com/87152467/127601471-c66b990e-f7b0-4574-8358-91e1382252ce.png))
+   ![image](https://user-images.githubusercontent.com/87152467/130254033-1c89ba09-4130-48f1-8aeb-9c7a12450b85.png)
+   ![image](https://user-images.githubusercontent.com/87152467/130254256-037eca8a-e65c-4b39-b82f-d5b7b2211876.png)
+   ![image](https://user-images.githubusercontent.com/87152467/130254348-40b66941-919b-4438-bc83-1a3cd5a04db0.png)
+
    
        
 ### 9	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
