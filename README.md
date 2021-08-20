@@ -64,13 +64,13 @@ Nosso sistema web "Mel - Adoção e Cuidados" tem como objetivo facilitar o proc
 
 
 ### 7	MODELO LÓGICO<br>
-   ![image](https://user-images.githubusercontent.com/87152467/130263764-b77ff299-5525-4000-a481-346db3dbcd99.png)
+   ![image](https://user-images.githubusercontent.com/87152467/130274237-e3bf90fb-26fc-4011-827a-4cbcd8a2505c.png)
 
 
 ### 8	MODELO FÍSICO<br>
-   ![image](https://user-images.githubusercontent.com/87152467/130254033-1c89ba09-4130-48f1-8aeb-9c7a12450b85.png)
-   ![image](https://user-images.githubusercontent.com/87152467/130254256-037eca8a-e65c-4b39-b82f-d5b7b2211876.png)
-   ![image](https://user-images.githubusercontent.com/87152467/130254348-40b66941-919b-4438-bc83-1a3cd5a04db0.png)
+   ![image](https://user-images.githubusercontent.com/87152467/130293098-c0df35ab-4bee-4182-b2ee-10650d066a71.png)
+   ![image](https://user-images.githubusercontent.com/87152467/130274775-88721973-2f1d-4b1b-a0d8-1b7f52a1454d.png)
+   ![image](https://user-images.githubusercontent.com/87152467/130274833-40de3284-a48d-4e5b-80bb-3035ca3c7e98.png)
 
    
        
