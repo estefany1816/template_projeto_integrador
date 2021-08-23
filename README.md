@@ -8,7 +8,6 @@ Integrantes do grupo<br>
 Estefany Silva Gonçalves:estefanysilvagaoncalves@gmail.com<br>
 Lucas Xavier:lucassxxavier@gmail.com<br>
 Maria Eduarda:mellltomaz@gmail.com<br>
-...
 
 ### 2.MINIMUNDO<br>
 
@@ -39,7 +38,7 @@ Nosso sistema web "Mel - Adoção e Cuidados" tem como objetivo facilitar o proc
  
 
  ### 5.PMC<br>
- (![image](https://user-images.githubusercontent.com/87152467/127596514-ffe7f265-2a68-40be-957f-02c208441f31.png))
+ ![image](https://user-images.githubusercontent.com/87152467/127596514-ffe7f265-2a68-40be-957f-02c208441f31.png)
  
  
  ### 6.MODELO CONCEITUAL<br>  
@@ -68,11 +67,10 @@ Nosso sistema web "Mel - Adoção e Cuidados" tem como objetivo facilitar o proc
 
 
 ### 8	MODELO FÍSICO<br>
-   ![image](https://user-images.githubusercontent.com/87152467/130293098-c0df35ab-4bee-4182-b2ee-10650d066a71.png)
-   ![image](https://user-images.githubusercontent.com/87152467/130274775-88721973-2f1d-4b1b-a0d8-1b7f52a1454d.png)
-   ![image](https://user-images.githubusercontent.com/87152467/130274833-40de3284-a48d-4e5b-80bb-3035ca3c7e98.png)
+  ![image](https://user-images.githubusercontent.com/87152467/130514017-31fb5c62-b616-4aae-9a5e-88d80e6476d1.png)
+  ![image](https://user-images.githubusercontent.com/87152467/130513932-da77e4e5-b2e7-4f45-b605-3351ccae642e.png)
+  ![image](https://user-images.githubusercontent.com/87152467/130514139-eeb0f78c-59cb-4b3f-a721-e2b0d0ae2569.png)
 
-   
        
 ### 9	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
         a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físico
