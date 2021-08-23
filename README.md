@@ -237,6 +237,7 @@ select* from donatario;
 select* from animal;
 ![image](https://user-images.githubusercontent.com/87152467/130479750-10279f3e-1958-4114-8ff5-55ba62b26a76.png)
 
+
 #### 10.2 PRINCIPAIS CONSULTAS DO SISTEMA 
  Inserir as principais consultas (relativas aos 5 principais relatórios) definidas previamente no iten 3.1 deste template.
  <br>
@@ -255,6 +256,19 @@ select* from animal;
  
  select count(*) "Quantidade", ani.codigo, ani.nome, ani.fk_tipo_animais_codigo, ani.sexo from animal ani inner join donatario don on (ani.codigo = don.fk_animal_codigo) group by ani.codigo, ani.nome, ani.fk_tipo_animais_codigo, ani.sexo;
  ![image](https://user-images.githubusercontent.com/87152467/130485889-993a371d-90ee-4d71-add3-8e9954d268db.png)
+ 
+ #### 10.b	BANCO DE DADOS -  RESTAURAÇÃO <br>
+ 
+-create table animal (codigo varchar(255), sexo varchar(255), nome varchar(255), fk_doador_codigo varchar(255), fk_tipo_animais_codigo varchar(255)) 
+
+-create table doador (codigo varchar(255), nome_usuario varchar(255), nome varchar(255), senha varchar(255)) 
+
+-create table donatario (codigo varchar(255),  nome_usuario varchar(255), nome varchar(255), senha varchar(255),fk_animal_codigo varchar(255))
+
+-create table tipo_animais (codigo varchar(255),  tipo varchar(255))
+
+![WhatsApp Image 2021-08-23 at 20 26 57](https://user-images.githubusercontent.com/62174352/130532393-1c988032-b196-4dd7-8936-c07a7d7cbf81.jpeg)
+
  
  ### 11 Gráficos, relatórios, integração com Linguagem de programação e outras solicitações.<br>
      OBS: Observe as instruções relacionadas a cada uma das atividades abaixo.<br>
