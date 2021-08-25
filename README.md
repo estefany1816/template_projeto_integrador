@@ -119,6 +119,8 @@ Nosso sistema web "Mel - Adoção e Cuidados" tem como objetivo facilitar o proc
 -create table tipo_animais (codigo varchar(255),  tipo varchar(255))
 
 ![WhatsApp Image 2021-08-23 at 20 26 57](https://user-images.githubusercontent.com/62174352/130532393-1c988032-b196-4dd7-8936-c07a7d7cbf81.jpeg)
+![image](https://user-images.githubusercontent.com/87152467/130852069-5d6545b5-1a87-4d67-8fdc-2c8c016afa76.png)
+
   
         c) formato .SQL
 CREATE TABLE Animais (
