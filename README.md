@@ -24,7 +24,7 @@ Nosso sistema web "Mel - Adoção e Cuidados" tem como objetivo facilitar o proc
     
 > A MEL - Adoção e Cuidados precisa inicialmente dos seguintes relatórios:
 * Relatório que informe quais são os doadores que estão cadastrados,  incluindo as seguintes informações: Codigo, nome, nome de usuário e senha.
-* Relatório que informe quais são os donatários que estão cadastrados, incluindo as seguintes informações: Codigo, nome, nome de usuário e senha.
+* Relatório que informe quantos animais estão cadastrados em cada tipo (categoria: cachorro, gato, calopsita e hamster).
 * Relatório que informe todos os animais cadastrados incluindo as seguintes informações: codigo, nome, categoria (cachorro, gato, calopsita e hamster) e sexo.
 * Relatório de quantos animais foram cadastrados por cada pessoa, incluindo as seguintes informações: nome e codigo do doador.
 * Relatório de quantas pessoas se interessaram por cada animal, incluindo as seguintes informações: Codigo, nome, categoria (cachorro, gato, calopsita e hamster) e sexo do animal.
@@ -255,8 +255,8 @@ select* from animal;
  select codigo, nome, nome_usuario, senha from doador;
  ![image](https://user-images.githubusercontent.com/87152467/130482417-85c91579-6ed4-46a0-a5c0-5607e5745b26.png)
  
- select codigo, nome, nome_usuario, senha from donatario;
- ![image](https://user-images.githubusercontent.com/87152467/130482552-02ba3e91-9c53-48de-b2af-48187035b9a2.png)
+ select count(*) "Quantidade", ta.tipos from animal ani inner join tipo_animais ta on (ani.fk_tipo_animais_codigo = ta.codigo) group by ta.tipos;
+ ![image](https://user-images.githubusercontent.com/87152467/130873609-8bed3394-40ee-4088-9858-35b768578322.png)
  
  select codigo, nome, fk_tipo_animais_codigo, sexo from animal;
  ![image](https://user-images.githubusercontent.com/87152467/130482928-71ea9118-6aa4-4dd0-848e-5125e593004d.png)
