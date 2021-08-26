@@ -23,7 +23,7 @@ Nosso sistema web "Mel - Adoção e Cuidados" tem como objetivo facilitar o proc
 #### 3.1 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
     
 > A MEL - Adoção e Cuidados precisa inicialmente dos seguintes relatórios:
-* Relatório que informe quais são os doadores que estão cadastrados,  incluindo as seguintes informações: Codigo, nome, nome de usuário e senha.
+* Relatório que informe quantos animais tem por sexo (macho e fêmea).
 * Relatório que informe quantos animais estão cadastrados em cada tipo (categoria: cachorro, gato, calopsita e hamster).
 * Relatório que informe todos os animais cadastrados incluindo as seguintes informações: codigo, nome, categoria (cachorro, gato, calopsita e hamster) e sexo.
 * Relatório de quantos animais foram cadastrados por cada pessoa, incluindo as seguintes informações: nome e codigo do doador.
@@ -252,8 +252,8 @@ select* from animal;
  Inserir as principais consultas (relativas aos 5 principais relatórios) definidas previamente no iten 3.1 deste template.
  <br>
  
- select codigo, nome, nome_usuario, senha from doador;
- ![image](https://user-images.githubusercontent.com/87152467/130482417-85c91579-6ed4-46a0-a5c0-5607e5745b26.png)
+ select count(*) "Quantidade", sexo from animal group by sexo;
+ ![image](https://user-images.githubusercontent.com/87152467/130877988-ffe361f8-bad5-467a-a700-8315cbef0940.png)
  
  select count(*) "Quantidade", ta.tipos from animal ani inner join tipo_animais ta on (ani.fk_tipo_animais_codigo = ta.codigo) group by ta.tipos;
  ![image](https://user-images.githubusercontent.com/87152467/130873609-8bed3394-40ee-4088-9858-35b768578322.png)
@@ -271,8 +271,56 @@ select* from animal;
  ### 11 Gráficos, relatórios, integração com Linguagem de programação e outras solicitações.<br>
      OBS: Observe as instruções relacionadas a cada uma das atividades abaixo.<br>
  #### 11.1	Integração com Linguagem de programação; <br>
+ Link para o colab: https://colab.research.google.com/drive/1hzXWwdca_IWv8wE0XC1cEG4UGNYS8xzg#scrollTo=TPXwPE9SHkhT
+ 
+ ### Relatório 1:
+  res = pd.read_sql_query("""
+                            select count(*) "Quantidade", sexo from animal group by sexo;
+                            """,conn)
+
+  sns.barplot(x='sexo',y='Quantidade', data=res)
+  
+  ### Relatório 2:
+  res = pd.read_sql_query("""select count(*) "Quantidade", ta.tipos from animal ani inner join tipo_animais ta on (ani.fk_tipo_animais_codigo = ta.codigo) group by ta.tipos
+                            """,conn)
+  res
+  
+  plt.xticks(rotation=70)
+  sns.barplot(x='tipos',y='Quantidade',data=res,)
+  
+   ### Relatório 4:
+   res = pd.read_sql_query("""
+                           select count(*) "Quantidade", doa.nome, doa.codigo from doador doa inner join animal ani on (doa.codigo = ani.fk_doador_codigo) group by doa.nome,        doa.codigo
+ """,conn)
+   res
+   
+   plt.xticks(rotation=70)
+   sns.barplot(x='nome',y='Quantidade',data=res,)
+
+   ### Relatório 5:
+   res = pd.read_sql_query("""
+                           select count(*) "Quantidade", ani.codigo, ani.nome, ani.fk_tipo_animais_codigo, ani.sexo from animal ani inner join donatario don on (ani.codigo =  don.fk_animal_codigo) group by ani.codigo, ani.nome, ani.fk_tipo_animais_codigo, ani.sexo
+                            """,conn)
+   res
+   
+   sns.barplot(x='nome',y='Quantidade',data=res)
+
  #### 11.2	Desenvolvimento de gráficos/relatórios pertinentes, juntamente com demais <br>
  #### solicitações feitas pelo professor. <br>
+ 
+ ### Relatório 1:
+ ![image](https://user-images.githubusercontent.com/87152467/130883799-cb10028b-0dd6-4dae-8cef-7880b063b42a.png)
+ 
+ ### Relatório 2:
+ ![image](https://user-images.githubusercontent.com/87152467/130883835-5c762689-a972-4c12-941f-50c0ced210f8.png)
+ 
+ ### Relatório 4:
+ ![image](https://user-images.githubusercontent.com/87152467/130883868-560befaa-8e4d-4e70-917a-edbd4c593e40.png)
+ ![image](https://user-images.githubusercontent.com/87152467/130883889-ed5020c8-1d84-42cd-8796-3c157bea4801.png)
+ 
+ ### Relatório 5:
+ ![image](https://user-images.githubusercontent.com/87152467/130883928-6a34c66d-ddb7-4b7a-b957-19fb0fe04887.png)
+
  <br>
  <br>
  
