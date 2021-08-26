@@ -25,9 +25,9 @@ Nosso sistema web "Mel - Adoção e Cuidados" tem como objetivo facilitar o proc
 > A MEL - Adoção e Cuidados precisa inicialmente dos seguintes relatórios:
 * Relatório que informe quantos animais tem por sexo (macho e fêmea).
 * Relatório que informe quantos animais estão cadastrados em cada tipo (categoria: cachorro, gato, calopsita e hamster).
-* Relatório que informe todos os animais cadastrados incluindo as seguintes informações: codigo, nome, categoria (cachorro, gato, calopsita e hamster) e sexo.
-* Relatório de quantos animais foram cadastrados por cada pessoa, incluindo as seguintes informações: nome e codigo do doador.
-* Relatório de quantas pessoas se interessaram por cada animal, incluindo as seguintes informações: Codigo, nome, categoria (cachorro, gato, calopsita e hamster) e sexo do animal.
+* Relatório que informe a quantidade de animais cadastrados por idade. Ordenada crescentemente por idade.
+* Relatório que informe quantos animais foram cadastrados por cada pessoa, incluindo as seguintes informações: nome e codigo do doador.
+* Relatório que informe quantas pessoas se interessaram por cada animal, incluindo as seguintes informações: Codigo, nome, categoria (cachorro, gato, calopsita e hamster) e sexo do animal.
  
 
 ### 4 TABELA DE DADOS DO SISTEMA:
@@ -239,13 +239,13 @@ select* from tipo_animais;
 ![image](https://user-images.githubusercontent.com/87152467/130479416-2368e36c-fcb7-46a9-94fa-4c8e7bfd10ab.png)
 
 select* from doador;
-![image](https://user-images.githubusercontent.com/87152467/130479537-fc2b095b-bd98-4e95-b3b8-b37e3b29ed35.png)
+![image](https://user-images.githubusercontent.com/87152467/131016817-5a6cdb8b-3af6-404a-b71b-5c5d279fe0f2.png)
 
 select* from donatario;
-![image](https://user-images.githubusercontent.com/87152467/130479603-7a0104a3-0d2e-48fa-aec5-61d24001858f.png)
+![image](https://user-images.githubusercontent.com/87152467/131016916-4efc3900-ac2b-4966-9e68-2d4de261272f.png)
 
 select* from animal;
-![image](https://user-images.githubusercontent.com/87152467/130479750-10279f3e-1958-4114-8ff5-55ba62b26a76.png)
+![image](https://user-images.githubusercontent.com/87152467/131017026-78bef8e1-538c-4df0-a9a0-7337937fb5aa.png)
 
 
 #### 10.2 PRINCIPAIS CONSULTAS DO SISTEMA 
@@ -253,19 +253,21 @@ select* from animal;
  <br>
  
  select count(*) "Quantidade", sexo from animal group by sexo;
- ![image](https://user-images.githubusercontent.com/87152467/130877988-ffe361f8-bad5-467a-a700-8315cbef0940.png)
+ ![image](https://user-images.githubusercontent.com/87152467/131025375-c4cf3b55-2759-429c-b975-8d2b57ed18af.png)
  
  select count(*) "Quantidade", ta.tipos from animal ani inner join tipo_animais ta on (ani.fk_tipo_animais_codigo = ta.codigo) group by ta.tipos;
- ![image](https://user-images.githubusercontent.com/87152467/130873609-8bed3394-40ee-4088-9858-35b768578322.png)
+ ![image](https://user-images.githubusercontent.com/87152467/131025430-937c75ab-9c4d-4ae9-82c6-78ef83d8b921.png)
  
- select codigo, nome, fk_tipo_animais_codigo, sexo from animal;
- ![image](https://user-images.githubusercontent.com/87152467/130482928-71ea9118-6aa4-4dd0-848e-5125e593004d.png)
+ select count(*) "Quantidade de Animais", idade from animal group by idade order by idade;
+ ![image](https://user-images.githubusercontent.com/87152467/131025522-95661a0d-1713-4d1b-9d06-8069a8c6ecdd.png)
  
  select count(*) "Quantidade", doa.nome, doa.codigo from doador doa inner join animal ani on (doa.codigo = ani.fk_doador_codigo) group by doa.nome, doa.codigo;
- ![image](https://user-images.githubusercontent.com/87152467/130485435-92b15fc7-d402-4938-b282-94af94f7ec47.png)
+ ![image](https://user-images.githubusercontent.com/87152467/131025610-33580c37-eed3-488d-83b4-dcdce87e9fd5.png)
+ ![image](https://user-images.githubusercontent.com/87152467/131025655-85f15543-f515-453e-97fd-e7756e94707c.png)
  
  select count(*) "Quantidade", ani.codigo, ani.nome, ani.fk_tipo_animais_codigo, ani.sexo from animal ani inner join donatario don on (ani.codigo = don.fk_animal_codigo) group by ani.codigo, ani.nome, ani.fk_tipo_animais_codigo, ani.sexo;
- ![image](https://user-images.githubusercontent.com/87152467/130485889-993a371d-90ee-4d71-add3-8e9954d268db.png) 
+ ![image](https://user-images.githubusercontent.com/87152467/131025723-4d390454-af0c-4469-beca-cfc936d28719.png)
+ ![image](https://user-images.githubusercontent.com/87152467/131025749-f45ff9bf-0b69-45e9-8a4e-8887c8220311.png)
 
  
  ### 11 Gráficos, relatórios, integração com Linguagem de programação e outras solicitações.<br>
@@ -288,12 +290,21 @@ select* from animal;
   plt.xticks(rotation=70)
   sns.barplot(x='tipos',y='Quantidade',data=res,)
   
-   ### Relatório 4:
+  ### Relatório 3:
+  res = pd.read_sql_query("""
+                  select count(*) "Quantidade de Animais", idade from animal group by idade order by idade;
+                  """,conn)
+  res
+  
+  sns.barplot(x='idade',y='Quantidade de Animais',data=res)
+  
+  ### Relatório 4:
    res = pd.read_sql_query("""
                            select count(*) "Quantidade", doa.nome, doa.codigo from doador doa inner join animal ani on (doa.codigo = ani.fk_doador_codigo) group by doa.nome,        doa.codigo
  """,conn)
    res
    
+   plt.figure(figsize= (20, 10))
    plt.xticks(rotation=70)
    sns.barplot(x='nome',y='Quantidade',data=res,)
 
@@ -309,17 +320,23 @@ select* from animal;
  #### solicitações feitas pelo professor. <br>
  
  ### Relatório 1:
- ![image](https://user-images.githubusercontent.com/87152467/130883799-cb10028b-0dd6-4dae-8cef-7880b063b42a.png)
+ ![image](https://user-images.githubusercontent.com/87152467/131025846-c5348ccf-e597-4062-b67e-2b8f79f18a76.png)
  
  ### Relatório 2:
- ![image](https://user-images.githubusercontent.com/87152467/130883835-5c762689-a972-4c12-941f-50c0ced210f8.png)
+ ![image](https://user-images.githubusercontent.com/87152467/131025925-179d0519-3663-44d7-a740-a5d1c04eb1d7.png)
+ 
+ ### Relatório 3:
+ ![image](https://user-images.githubusercontent.com/87152467/131026114-aaa5a32b-8796-4f7d-9026-a31a67c6af5e.png)
+ ![image](https://user-images.githubusercontent.com/87152467/131026156-88bf9e23-df52-4816-a1a3-5f1744f392ae.png)
  
  ### Relatório 4:
- ![image](https://user-images.githubusercontent.com/87152467/130883868-560befaa-8e4d-4e70-917a-edbd4c593e40.png)
- ![image](https://user-images.githubusercontent.com/87152467/130883889-ed5020c8-1d84-42cd-8796-3c157bea4801.png)
+ ![image](https://user-images.githubusercontent.com/87152467/131026418-37a968a9-4cef-45d0-89fd-41a8aaf31b5c.png)
+ ![image](https://user-images.githubusercontent.com/87152467/131026500-85fc8328-5fce-4cf6-afe7-d10e7927b2ae.png)
+ ![image](https://user-images.githubusercontent.com/87152467/131026557-03abfbfe-8d70-4b16-8113-3472ddb53da4.png)
  
  ### Relatório 5:
- ![image](https://user-images.githubusercontent.com/87152467/130883928-6a34c66d-ddb7-4b7a-b957-19fb0fe04887.png)
+ ![image](https://user-images.githubusercontent.com/87152467/131026859-98f32c3c-6580-4651-89c8-cd5b54827fbf.png)
+ ![image](https://user-images.githubusercontent.com/87152467/131026909-00a3f941-1960-4ca6-be04-ca3555189f7a.png)
 
  <br>
  <br>
