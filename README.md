@@ -32,7 +32,7 @@ Nosso sistema web "Mel - Adoção e Cuidados" tem como objetivo facilitar o proc
 
 ### 4 TABELA DE DADOS DO SISTEMA:
     
-![Tabela de dados da Mel - Adoção e Cuidados](https://github.com/solebellsBEACH/projetoIntegrador/blob/main/pi_tabela%20(1).xlsx)
+![Tabela de dados da Mel - Adoção e Cuidados](https://github.com/solebellsBEACH/projetoIntegrador/blob/main/pi_tabela%20(2).xlsx)
 
  
  
@@ -60,6 +60,7 @@ Nosso sistema web "Mel - Adoção e Cuidados" tem como objetivo facilitar o proc
     codigo_Tipo_Animal: Armazena os códigos que indentificam cada categoria de animal,
     codigo_animal: Armazena o código do animal.
     sexo_animal: Armazena o sexo do animal.
+    idade_animal: Armazena a idade do animal.
 
 
 ### 7	MODELO LÓGICO<br>
