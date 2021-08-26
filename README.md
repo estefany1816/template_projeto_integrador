@@ -43,7 +43,7 @@ Nosso sistema web "Mel - Adoção e Cuidados" tem como objetivo facilitar o proc
  
  ### 6.MODELO CONCEITUAL<br>  
         
-![image](https://user-images.githubusercontent.com/87152467/130252472-66f5542d-d9f3-4e56-a705-a3890877c724.png)
+![image](https://user-images.githubusercontent.com/87152467/131033810-19fff3e4-c541-4cdd-bd5c-83b936630a27.png)
     
       
     
@@ -63,13 +63,13 @@ Nosso sistema web "Mel - Adoção e Cuidados" tem como objetivo facilitar o proc
 
 
 ### 7	MODELO LÓGICO<br>
-   ![image](https://user-images.githubusercontent.com/87152467/130297653-d1f00834-ee9b-4ac6-b4a8-9cce23c3c602.png)
+   ![image](https://user-images.githubusercontent.com/87152467/131034402-9a60d1d7-db7e-4f7d-9c58-8118f376e6ad.png)
 
 
 ### 8	MODELO FÍSICO<br>
-  ![image](https://user-images.githubusercontent.com/87152467/130514017-31fb5c62-b616-4aae-9a5e-88d80e6476d1.png)
-  ![image](https://user-images.githubusercontent.com/87152467/130513932-da77e4e5-b2e7-4f45-b605-3351ccae642e.png)
-  ![image](https://user-images.githubusercontent.com/87152467/130514139-eeb0f78c-59cb-4b3f-a721-e2b0d0ae2569.png)
+  ![image](https://user-images.githubusercontent.com/87152467/131034750-b2147ef5-4060-4587-8e3c-8e779fdf9c33.png)
+  ![image](https://user-images.githubusercontent.com/87152467/131035278-a3fbf2ab-bf7d-4df1-8010-92d0d8cad732.png)
+  ![image](https://user-images.githubusercontent.com/87152467/131035369-bd7e5270-a301-466a-bdeb-553a1d224975.png)
 
        
 ### 9	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
