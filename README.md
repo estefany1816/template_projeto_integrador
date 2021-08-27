@@ -345,6 +345,10 @@ select* from animal;
  ### 12 Slides e Apresentação em vídeo. <br>
      OBS: Observe as instruções relacionadas a cada uma das atividades abaixo.<br>
  #### 12.1 Slides; <br>
+ 
+ [Slides em pdf](https://github.com/estefany1816/template_projeto_integrador/files/7068988/PI_slides_PK.pdf) <br>
+ [Slides em pptx](https://github.com/estefany1816/template_projeto_integrador/files/7068990/PI_slides_PK.pptx) <br>
+ 
  #### 12.2 Apresentação em vídeo <br>
  <br>
  <br>   
