@@ -351,7 +351,7 @@ select* from animal;
  
  #### 12.2 Apresentação em vídeo <br>
  
- https://youtu.be/Wpr_AIPEv4I
+ https://youtu.be/wijKXRqSpEQ
 
 
     
