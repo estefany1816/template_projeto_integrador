@@ -367,7 +367,7 @@ https://drive.google.com/file/d/19Lrzgqi1I8CwBgg9Y0A6w1v7WHbLBkpP/view?usp=shari
 https://progweb-front.herokuapp.com/dashboard
 
 ### 16 Link do repositório - Projeto MEL - Adoções e Cuidados (Android Studio) <br>
-Nesse link está o repositório integrado no Android Studio. Nele contém todas as pastas do projeto.
+Nesse link está o repositório integrado no Android Studio. Nele contém todas as pastas do projeto. <br>
 https://github.com/estefany1816/melapp
 
 ##### About Formatting
