@@ -355,10 +355,10 @@ select* from animal;
 
  ### 13 Telas - Versão Mobile <br>
  #### 13.1 Protótipos de Telas - Mobile <br>
- *** A colocar *** <br>
+ [Prints dos protótipos em pdf](https://github.com/estefany1816/template_projeto_integrador/files/7920715/Prints_prototipos.pdf)
+ <br>
  #### 13.2 Telas Desenvolvidas no Android Studio - Mobile <br>
- *** Em andamento *** <br>
-    
+ [Telas -_Mobile em pdf](https://github.com/estefany1816/template_projeto_integrador/files/7920823/telas_mobile_AS.pdf)
 ##### About Formatting
     https://help.github.com/articles/about-writing-and-formatting-on-github/
     
